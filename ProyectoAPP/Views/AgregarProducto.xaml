@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoAPP.Views.AgregarProducto"
+             Title="AgregarProducto">
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+        <Label Text="Agregar Producto" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
+        
+        <Entry x:Name="txtIdProducto"
+       Placeholder="Ingrese el codigo de producto"/>
+
+        <Entry x:Name="txtNombre"
+       Placeholder="Ingrese el nombre de producto"/>
+
+        <Entry x:Name="txtStock"
+       Placeholder="Ingrese el Stock de producto"/>
+
+        <Entry x:Name="txtPrecio"
+       Placeholder="Ingrese el Precio de producto"/>
+
+        <Button x:Name="btnAgregar"
+        Text="Agregar"
+        Clicked="btnAgregar_Clicked"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

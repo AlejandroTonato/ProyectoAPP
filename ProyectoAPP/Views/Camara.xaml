@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoAPP.Views.Camara"
+             Title="Camara">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+        <Label Text="Acceso Camara" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+        <Button x:Name ="btnCapturar" Text="Tomar Foto" Clicked="btnCapturar_Clicked"/>
+        <Button Text="Obtener Galeria" Clicked="Button_Clicked"/>
+        <Image x:Name="imgFoto" />
+    </VerticalStackLayout>
+</ContentPage>

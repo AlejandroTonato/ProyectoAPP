@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoAPP.Views.MainPageProducto" 
+             Title="MainPageProducto">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+        <Label Text="Lista Productos" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+        <ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid RowDefinitions="Auto" ColumnDefinitions="Auto,Auto,Auto,Auto">
+                                <Label x:Name="lblcodigo" Text="{Binding IdProducto}" Grid.Row="0" Grid.Column="0"/>
+                                <Label x:Name="lblnombre" Text="{Binding NameProducto}" Grid.Row="0" Grid.Column="1"/>
+                                <Label x:Name="lblapellido" Text="{Binding StockProducto}" Grid.Row="0" Grid.Column="2"/>
+                                <Label x:Name="lbledad" Text="{Binding PrecioProducto}" Grid.Row="0" Grid.Column="3"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+        <ListView x:Name="ListaProductos" ItemSelected="ListaProductos_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblcodigo" Text="{Binding IdProducto}" Grid.Row="0" Grid.Column="0"/>
+                                <Label x:Name="lblnombre" Text="{Binding NameProducto}" Grid.Row="0" Grid.Column="1"/>
+                                <Label x:Name="lblapellido" Text="{Binding StockProducto}" Grid.Row="0" Grid.Column="2"/>
+                                <Label x:Name="lbledad" Text="{Binding PrecioProducto,StringFormat='{0:C}'}" Grid.Row="0" Grid.Column="3"/>
+
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button x:Name ="btnAdd" Text="Agregar Producto"
+        Clicked="btnAdd_Clicked"/>
+        <Button x:Name ="btnCamara" Text="Camara"
+        Clicked="btnCamara_Clicked"/>
+
+        <Button x:Name ="btnApi" Text="API"
+         Clicked="btnApi_Clicked" />
+
+
+    </VerticalStackLayout>        
+</ContentPage>

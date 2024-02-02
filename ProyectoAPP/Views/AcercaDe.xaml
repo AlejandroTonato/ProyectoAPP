@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoAPP.Views.AcercaDe"
+             Title="AcercaDe">
+    <VerticalStackLayout Spacing="20" Padding="25">
+
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+
+        <Label 
+            Text="Este Proyecto fue Realizado por Alejandro Tonato y Richard Legarda 8vo B fecha:01/02/2024"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+    </VerticalStackLayout>
+</ContentPage>

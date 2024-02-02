@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoAPP.Views.UpdateDelete"
+             Title="UpdateDelete">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+        <Label Text="Ingreso/Despacho de Productos" HorizontalOptions="Center" FontSize="20"/>
+
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
+            <Label Grid.Row="0" Grid.Column="0" Text="Codigo Producto: " FontAttributes="Bold"/>
+            <Label x:Name ="lblCodigo" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" />
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Nombre Producto: " FontAttributes="Bold"/>
+            <Label x:Name="lblNombre" Grid.Row="1" Grid.Column="1" HorizontalOptions="End" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Stock Producto: " FontAttributes="Bold"/>
+            <Label x:Name="lblStock" Grid.Row="2" Grid.Column="1" HorizontalOptions="End" />
+
+            <Label Grid.Row="3" Grid.Column="0" Text="Precio Producto: " FontAttributes="Bold"/>
+            <Label x:Name="lblPrecio" Grid.Row="3" Grid.Column="1" HorizontalOptions="End"/>
+        </Grid>
+
+        <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre"/>
+        <Entry x:Name="txtStock" Placeholder="Digite cantidad de ingreso/despacho de producto"/>
+        <Entry x:Name="txtPrecio" Placeholder="Ingrese el Precio"/>
+
+        <Grid RowDefinitions="Auto" ColumnDefinitions="Auto,*">
+            <Button x:Name="btnActualizarIngreso" Grid.Row="0" Grid.Column="0" Text="Ingreso" Clicked="btnActualizarIngreso_Clicked" />
+            <Button x:Name="btnActualizarDespacho" Grid.Row="0" Grid.Column="1" Text="Despacho" Clicked="btnActualizarDespacho_Clicked" HorizontalOptions="End"/>
+        </Grid>
+        
+        <Button x:Name="btnEliminar" Text="ElIMINAR"
+        Clicked="btnEliminar_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
